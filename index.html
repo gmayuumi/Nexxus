@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexxus AutoCare - Produtos Profissionais para Estética Automotiva</title>
+    <meta name="description" content="A melhor seleção de produtos para estética automotiva: lavagem, polimento, proteção e detalhamento. Cuide do seu carro como um profissional com a Nexxus AutoCare.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <header class="hero-section">
+        <div class="promo-top-bar">
+            <p>🔥 Frete grátis acima de R$ 200 + brinde exclusivo para pedidos via WhatsApp!</p>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#"><img src="https://i.ibb.co/wF2fm8jx/Design-sem-nome-1.png" alt="Logo Nexxus AutoCare" class="logo"></a>
+                <div class="desktop-nav">
+                    <a href="#lavagem">Lavagem</a>
+                    <a href="#protecao">Proteção</a>
+                    <a href="#polimento">Polimento</a>
+                    <a href="#interno">Interno</a>
+                    <a href="#acessorios">Acessórios</a>
+                </div>
+                <div class="nav-right-group">
+                    <button class="btn-whatsapp nav-btn" onclick="openGeneralWhatsApp()">Falar com Vendedor</button>
+                    <button class="hamburger" id="hamburger-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="mobile-nav" id="mobile-menu">
+            <a href="#" id="mobile-categories-toggle" class="mobile-nav-main-link">Categorias <i class="fas fa-chevron-down"></i></a>
+            <div class="mobile-submenu" id="mobile-submenu">
+                <a href="#lavagem" class="mobile-nav-link">Lavagem</a>
+                <a href="#protecao" class="mobile-nav-link">Proteção</a>
+                <a href="#polimento" class="mobile-nav-link">Polimento</a>
+                <a href="#interno" class="mobile-nav-link">Detalhamento Interno</a>
+                <a href="#acessorios" class="mobile-nav-link">Acessórios</a>
+                <a href="#kits" class="mobile-nav-link">Kits</a>
+            </div>
+            <a href="#localizacao" class="mobile-nav-link mobile-nav-single">Nossa Loja</a>
+            <a href="#depoimentos" class="mobile-nav-link mobile-nav-single">Avaliações</a>
+            <a href="#contato" class="mobile-nav-link mobile-nav-single">Contato</a>
+            <hr>
+            <button class="btn-whatsapp" onclick="openGeneralWhatsApp()">Falar com Vendedor</button>
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Cuide do seu carro como um profissional.</h1>
+                <p>A mais alta performance em produtos para estética automotiva, selecionados para entusiastas e detailers exigentes.</p>
+                <button class="btn-whatsapp-large" onclick="openGeneralWhatsApp()"><i class="fab fa-whatsapp"></i> Fazer Pedido Agora</button>
+            </div>
+            <div class="hero-products-carousel">
+                <h3>Destaques do Mês</h3>
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide product-card-hero">
+                            <span class="badge promo">OFERTA</span>
+                            <img src="https://placehold.co/400x400/eeeeee/222222?text=Produto" alt="Shampoo Automotivo Premium">
+                            <h4>Shampoo Premium</h4>
+                            <p class="price">R$ 89,90</p>
+                            <button class="btn-whatsapp" onclick="buyWhatsApp('Shampoo Automotivo Premium', 'R$ 89,90')">Comprar</button>
+                        </div>
+                        
+                        <div class="swiper-slide product-card-hero">
+                            <img src="https://placehold.co/400x400/eeeeee/222222?text=Produto" alt="Cera Líquida Pro Shine">
+                            <h4>Cera Líquida Pro Shine</h4>
+                            <p class="price">R$ 129,90</p>
+                            <button class="btn-whatsapp" onclick="buyWhatsApp('Cera Líquida Pro Shine', 'R$ 129,90')">Comprar</button>
+                        </div>
+                        
+                        <div class="swiper-slide product-card-hero">
+                            <span class="badge new">NOVO</span>
+                            <img src="https://placehold.co/400x400/eeeeee/222222?text=Produto" alt="Limpa Interno Multiuso">
+                            <h4>Limpa Interno Multiuso</h4>
+                            <p class="price">R$ 69,90</p>
+                            <button class="btn-whatsapp" onclick="buyWhatsApp('Limpa Interno Multiuso', 'R$ 69,90')">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="benefits-section">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Produtos Originais</h3>
+                        <p>Garantia de procedência e qualidade.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Entrega Rápida</h3>
+                        <p>Receba seus produtos em tempo recorde.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-award"></i>
+                        <h3>Curadoria de Qualidade</h3>
+                        <p>Apenas as melhores marcas do mercado.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>Atendimento Consultivo</h3>
+                        <p>Nossos especialistas ajudam você a escolher.</p>
+                    </div>
+                </div>
+                <div class="section-divider-container">
+                    <div class="section-divider-fancy"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section alternate-bg">
+            <div class="container">
+                <h2>Navegue por Categorias</h2>
+                <p class="section-subtitle">Encontre tudo o que você precisa para cada etapa do cuidado automotivo.</p>
+                <div class="categories-grid-v2">
+                    <a href="#lavagem" class="category-card-v2">
+                        <div class="category-image-wrapper">
+                            <img src="lavagem-icon.jpg" alt="Lavagem Automotiva">
+                        </div>
+                        <h4>Lavagem</h4>
+                    </a>
+                    <a href="#protecao" class="category-card-v2">
+                        <div class="category-image-wrapper">
+                            <img src="protecao-icon.jpg" alt="Proteção de Pintura">
+                        </div>
+                        <h4>Proteção</h4>
+                    </a>
+                    <a href="#polimento" class="category-card-v2">
+                        <div class="category-image-wrapper">
+                            <img src="polimento-icon.jpg" alt="Polimento">
+                        </div>
+                        <h4>Polimento</h4>
+                    </a>
+                    <a href="#interno" class="category-card-v2">
+                        <div class="category-image-wrapper">
+                            <img src="interno-icon.jpg" alt="Detalhamento Interno">
+                        </div>
+                        <h4>Interno</h4>
+                    </a>
+                    <a href="#acessorios" class="category-card-v2">
+                        <div class="category-image-wrapper">
+                            <img src="acessorios-icon.jpg" alt="Acessórios">
+                        </div>
+                        <h4>Acessórios</h4>
+                    </a>
+                     <a href="#kits" class="category-card-v2">
+                        <div class="category-image-wrapper">
+                            <img src="kits-icon.jpg" alt="Kits Profissionais">
+                        </div>
+                        <h4>Kits</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner-placeholder-section">
+            <div class="container">
+                <div class="banner-placeholder">
+                    <p>Espaço para Banner Criativo (1200 x 250)</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="lavagem" class="products-section">
+            <div class="container">
+                <h2>Lavagem & Limpeza</h2>
+            </div>
+            <div class="product-carousel-container">
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <span class="badge best-seller">Mais Vendido</span>
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Shampoo Automotivo Premium">
+                                <h3>Shampoo Automotivo Premium</h3>
+                                <p class="description">Limpeza profunda com pH neutro e alta lubrificação.</p>
+                                <p class="price">R$ 89,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Shampoo Automotivo Premium', 'R$ 89,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Espuma Neutra Snow Foam">
+                                <h3>Espuma Neutra Snow Foam</h3>
+                                <p class="description">Espuma densa que remove a sujeira sem agredir a pintura.</p>
+                                <p class="price">R$ 79,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Espuma Neutra Snow Foam', 'R$ 79,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Pulverizador de Espuma 1L">
+                                <h3>Pulverizador de Espuma 1L</h3>
+                                <p class="description">Gere espuma sem a necessidade de lavadora de pressão.</p>
+                                <p class="price">R$ 119,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Pulverizador de Espuma 1L', 'R$ 119,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Toalha de Secagem XXL">
+                                <h3>Toalha de Secagem XXL</h3>
+                                <p class="description">Microfibra de alta gramatura para absorção máxima.</p>
+                                <p class="price">R$ 69,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Toalha de Secagem XXL', 'R$ 69,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Luva de Microfibra">
+                                <h3>Luva de Microfibra Macia</h3>
+                                <p class="description">Evita riscos e retém a sujeira com segurança durante a lavagem.</p>
+                                <p class="price">R$ 45,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Luva de Microfibra Macia', 'R$ 45,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Balde com Separador">
+                                <h3>Balde com Separador de Partículas</h3>
+                                <p class="description">O sistema Grit Guard impede que a sujeira volte para a luva.</p>
+                                <p class="price">R$ 99,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Balde com Separador', 'R$ 99,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="protecao" class="products-section alternate-bg">
+            <div class="container">
+                <h2>Proteção de Pintura</h2>
+            </div>
+            <div class="product-carousel-container">
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Cera Líquida Pro Shine">
+                                <h3>Cera Líquida Pro Shine</h3>
+                                <p class="description">Brilho molhado instantâneo e proteção UV por semanas.</p>
+                                <p class="price">R$ 129,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Cera Líquida Pro Shine', 'R$ 129,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <span class="badge promo">5% OFF</span>
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Coating Cerâmico X-Pro">
+                                <h3>Coating Cerâmico X-Pro</h3>
+                                <p class="description">Proteção de até 3 anos contra riscos e intempéries.</p>
+                                <p class="price">R$ 349,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Coating Cerâmico X-Pro', 'R$ 349,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Descontaminante Iron Clean">
+                                <h3>Descontaminante Iron Clean</h3>
+                                <p class="description">Remove contaminação ferrosa de pintura e rodas.</p>
+                                <p class="price">R$ 99,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Descontaminante Iron Clean', 'R$ 99,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Aplicador de Espuma">
+                                <h3>Aplicador de Espuma</h3>
+                                <p class="description">Espuma macia para aplicação uniforme de ceras e selantes.</p>
+                                <p class="price">R$ 19,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Aplicador de Espuma', 'R$ 19,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Cera de Carnaúba Gold">
+                                <h3>Cera de Carnaúba Gold</h3>
+                                <p class="description">Brilho profundo e quente, com alta repelência à água.</p>
+                                <p class="price">R$ 159,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Cera de Carnaúba Gold', 'R$ 159,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Selante Sintético Power">
+                                <h3>Selante Sintético Power</h3>
+                                <p class="description">Proteção duradoura de até 6 meses com brilho espelhado.</p>
+                                <p class="price">R$ 119,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Selante Sintético Power', 'R$ 119,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="educational-section textured-bg">
+            <div class="container educational-layout">
+                <div class="educational-image">
+                    <div class="educational-image-frame">
+                        <img src="https://images.pexels.com/photos/6872585/pexels-photo-6872585.jpeg" alt="Carro sendo detalhado">
+                    </div>
+                </div>
+                <div class="educational-text">
+                    <h2>Entenda o Processo do Detalhamento Profissional</h2>
+                    <p>Cuidar do seu carro vai além de lavar. Um detalhamento completo segue etapas essenciais para garantir um resultado impecável e duradouro, protegendo seu investimento com os melhores produtos para estética automotiva.</p>
+                    <div class="process-steps">
+                        <div class="step"><span><i class="fas fa-soap"></i></span> Lavar</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><span><i class="fas fa-wind"></i></span> Polir</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><span><i class="fas fa-shield-halved"></i></span> Proteger</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><span><i class="fas fa-check-circle"></i></span> Finalizar</div>
+                    </div>
+                     <button class="btn-whatsapp-secondary" onclick="openGeneralWhatsApp()">Tire suas dúvidas no WhatsApp</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="polimento" class="products-section">
+            <div class="container">
+                <h2>Polimento & Correção</h2>
+            </div>
+            <div class="product-carousel-container">
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Politriz Roto-Orbital">
+                                <h3>Politriz Roto-Orbital Pro</h3>
+                                <p class="description">Movimento livre de hologramas para um acabamento perfeito.</p>
+                                <p class="price">R$ 899,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Politriz Roto-Orbital Pro', 'R$ 899,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Composto de Corte Pesado">
+                                <h3>Composto de Corte Pesado</h3>
+                                <p class="description">Remove riscos profundos e marcas de lixa com eficiência.</p>
+                                <p class="price">R$ 149,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Composto de Corte Pesado', 'R$ 149,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Lustrador de Acabamento">
+                                <h3>Lustrador de Acabamento Fino</h3>
+                                <p class="description">Elimina marcas leves e promove um brilho intenso e profundo.</p>
+                                <p class="price">R$ 139,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Lustrador de Acabamento Fino', 'R$ 139,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Boina de Lã Agressiva">
+                                <h3>Boina de Lã Agressiva</h3>
+                                <p class="description">Ideal para a etapa de corte em vernizes mais duros.</p>
+                                <p class="price">R$ 79,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Boina de Lã Agressiva', 'R$ 79,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Boina de Espuma para Lustro">
+                                <h3>Boina de Espuma para Lustro</h3>
+                                <p class="description">Espuma macia para um acabamento espelhado e sem defeitos.</p>
+                                <p class="price">R$ 69,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Boina de Espuma para Lustro', 'R$ 69,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Fita de Mascaramento">
+                                <h3>Fita de Mascaramento Premium</h3>
+                                <p class="description">Protege plásticos e borrachas durante o polimento.</p>
+                                <p class="price">R$ 29,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Fita de Mascaramento Premium', 'R$ 29,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interno" class="products-section alternate-bg">
+            <div class="container">
+                <h2>Detalhamento Interno</h2>
+            </div>
+            <div class="product-carousel-container">
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Limpa Interno Multiuso">
+                                <h3>Limpa Interno Multiuso (APC)</h3>
+                                <p class="description">Limpa plásticos, tecidos e carpetes com segurança e eficácia.</p>
+                                <p class="price">R$ 69,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Limpa Interno Multiuso', 'R$ 69,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                         <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Hidratante de Couro">
+                                <h3>Hidratante de Couro Premium</h3>
+                                <p class="description">Nutre e protege o couro, evitando rachaduras e ressecamento.</p>
+                                <p class="price">R$ 99,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Hidratante de Couro Premium', 'R$ 99,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                         <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Revitalizador de Plásticos">
+                                <h3>Revitalizador de Plásticos Internos</h3>
+                                <p class="description">Restaura a cor original e oferece proteção UV.</p>
+                                <p class="price">R$ 75,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Revitalizador de Plásticos Internos', 'R$ 75,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                         <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Limpa Vidros Anti-embaçante">
+                                <h3>Limpa Vidros Anti-embaçante</h3>
+                                <p class="description">Visão cristalina sem manchas, com película protetora.</p>
+                                <p class="price">R$ 49,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Limpa Vidros Anti-embaçante', 'R$ 49,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                         <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Escova para Detalhamento">
+                                <h3>Escova para Detalhamento Interno</h3>
+                                <p class="description">Cerdas macias para limpar saídas de ar e áreas delicadas.</p>
+                                <p class="price">R$ 35,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Escova para Detalhamento Interno', 'R$ 35,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                         <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Odorizador de Ambientes">
+                                <h3>Odorizador de Ambientes Fresh</h3>
+                                <p class="description">Elimina maus odores e deixa um aroma agradável de carro novo.</p>
+                                <p class="price">R$ 42,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Odorizador de Ambientes Fresh', 'R$ 42,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="acessorios" class="products-section textured-bg">
+            <div class="container">
+                <h2>Acessórios Essenciais</h2>
+            </div>
+            <div class="product-carousel-container">
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                         <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Kit de Pincéis de Detalhamento">
+                                <h3>Kit de Pincéis de Detalhamento</h3>
+                                <p class="description">5 tamanhos diferentes para limpeza interna e externa.</p>
+                                <p class="price">R$ 89,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Kit de Pincéis de Detalhamento', 'R$ 89,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Borrifador Profissional">
+                                <h3>Borrifador Profissional 500ml</h3>
+                                <p class="description">Resistente a químicos e com bico de pulverização ajustável.</p>
+                                <p class="price">R$ 39,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Borrifador Profissional 500ml', 'R$ 39,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Kit de Toalhas de Microfibra">
+                                <h3>Kit 3 Toalhas de Microfibra</h3>
+                                <p class="description">Sem costura, ideal para remoção de ceras e polidores.</p>
+                                <p class="price">R$ 59,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Kit 3 Toalhas de Microfibra', 'R$ 59,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Escova para Rodas e Pneus">
+                                <h3>Escova para Rodas e Pneus</h3>
+                                <p class="description">Cerdas resistentes para limpeza pesada sem danificar.</p>
+                                <p class="price">R$ 49,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Escova para Rodas e Pneus', 'R$ 49,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Aplicador de Microfibra">
+                                <h3>Aplicador de Microfibra Redondo</h3>
+                                <p class="description">Perfeito para aplicar ceras, selantes e revitalizadores.</p>
+                                <p class="price">R$ 25,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Aplicador de Microfibra Redondo', 'R$ 25,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Clay Bar Média Abrasão">
+                                <h3>Clay Bar Média Abrasão</h3>
+                                <p class="description">Remove contaminações da pintura deixando-a lisa.</p>
+                                <p class="price">R$ 65,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Clay Bar Média Abrasão', 'R$ 65,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kits" class="products-section alternate-bg">
+            <div class="container">
+                <h2>Kits Profissionais</h2>
+            </div>
+            <div class="product-carousel-container">
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <span class="badge best-seller">Custo-Benefício</span>
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Kit Lavagem Essencial">
+                                <h3>Kit Lavagem Essencial</h3>
+                                <p class="description">Shampoo, luva de microfibra e toalha de secagem.</p>
+                                <p class="price">R$ 189,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Kit Lavagem Essencial', 'R$ 189,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Kit Proteção Anual">
+                                <h3>Kit Proteção Anual</h3>
+                                <p class="description">Coating cerâmico, preparador de superfície e aplicadores.</p>
+                                <p class="price">R$ 429,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Kit Proteção Anual', 'R$ 429,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Kit Polimento Iniciante">
+                                <h3>Kit Polimento Iniciante</h3>
+                                <p class="description">Compostos de corte/lustro e boinas de espuma.</p>
+                                <p class="price">R$ 299,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Kit Polimento Iniciante', 'R$ 299,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Kit Limpeza Interna Completo">
+                                <h3>Kit Limpeza Interna Completo</h3>
+                                <p class="description">APC, hidratante de couro, limpa vidros e pincéis.</p>
+                                <p class="price">R$ 249,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Kit Limpeza Interna Completo', 'R$ 249,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Kit Descontaminação Total">
+                                <h3>Kit Descontaminação Total</h3>
+                                <p class="description">Descontaminante ferroso e clay bar com lubrificante.</p>
+                                <p class="price">R$ 159,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Kit Descontaminação Total', 'R$ 159,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="https://placehold.co/600x600/eeeeee/222222?text=Produto" alt="Kit do Detailer Profissional">
+                                <h3>Kit do Detailer Profissional</h3>
+                                <p class="description">Uma seleção dos nossos melhores produtos de cada categoria.</p>
+                                <p class="price">R$ 799,90</p>
+                                <button class="btn-whatsapp" onclick="buyWhatsApp('Kit do Detailer Profissional', 'R$ 799,90')">Comprar via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="depoimentos" class="testimonials-section">
+            <div class="container">
+                <h2>Mais de <strong>1.200 clientes satisfeitos</strong> em todo o Brasil!</h2>
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial-card">
+                             <img src="https://i.pravatar.cc/80?img=1" alt="Cliente Carlos Silva">
+                            <p>"O coating cerâmico deixou meu carro com um brilho absurdo! Parece que saiu da concessionária. Atendimento da Nexxus é diferenciado."</p>
+                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <h4>Carlos Silva</h4>
+                        </div>
+                        <div class="swiper-slide testimonial-card">
+                             <img src="https://i.pravatar.cc/80?img=5" alt="Cliente Mariana Andrade">
+                            <p>"Recebi meu kit de lavagem super rápido aqui no sul. A qualidade da toalha de secagem é algo que eu nunca tinha visto. Recomendo demais!"</p>
+                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <h4>Mariana Andrade</h4>
+                        </div>
+                        <div class="swiper-slide testimonial-card">
+                            <img src="https://i.pravatar.cc/80?img=8" alt="Cliente Ricardo Pereira">
+                            <p>"Tinha dúvidas sobre qual cera usar. O vendedor me deu uma aula pelo WhatsApp e indicou o produto certo. Isso é atendimento de verdade!"</p>
+                             <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <h4>Ricardo Pereira</h4>
+                        </div>
+                        <div class="swiper-slide testimonial-card">
+                             <img src="https://i.pravatar.cc/80?img=32" alt="Cliente Juliana Costa">
+                            <p>"Comprei o kit de detalhamento interno e meu carro está com cheiro de novo. O limpa multiuso é simplesmente mágico. Virou meu site favorito!"</p>
+                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <h4>Juliana Costa</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="localizacao" class="location-section">
+            <div class="container">
+                <h2>Visite nossa Loja Física</h2>
+                <p class="section-subtitle">Venha conhecer nosso showroom e receba uma consultoria exclusiva com nossos especialistas.</p>
+                <div class="location-layout">
+                    <div class="location-info">
+                        <h3>Nexxus AutoCare - São Paulo</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Rua Oscar Freire, 978<br>Jardins, São Paulo - SP, 01426-002</p>
+                        <p><i class="fas fa-phone"></i> (11) 99999-8888</p>
+                        <p><i class="fas fa-envelope"></i> contato@nexxusautocare.com.br</p>
+                        <h4><i class="fas fa-clock"></i> Horário de Funcionamento</h4>
+                        <p><strong>Segunda a Sexta:</strong> 9h às 18h<br><strong>Sábados:</strong> 9h às 14h</p>
+                        <a href="https://www.google.com/maps/place/R.+Oscar+Freire,+978+-+Jardins,+S%C3%A3o+Paulo+-+SP,+01426-002" target="_blank" class="btn-whatsapp-secondary">Ver no Google Maps</a>
+                    </div>
+                    <div class="location-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.249025000003!2d-46.66832968502219!3d-23.55943688468351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d507c34d57%3A0x296f8c37c3552862!2sR.+Oscar+Freire%2C+978+-+Jardins%2C+S%C3%A3o+Paulo+-+SP%2C+01426-002!5e0!3m2!1spt-BR!2sbr!4v1562787651032!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="partners-section alternate-bg">
+            <div class="container">
+                 <h3>Trabalhamos com as melhores marcas do mundo</h3>
+                <div class="logos-slider">
+                    <img src="https://logospng.org/download/sonax/logo-sonax-1536.png" alt="Logo Sonax">
+                    <img src="https://www.vonixx.com.br/wp-content/uploads/2021/08/logo-vonixx-preto.png" alt="Logo Vonixx">
+                    <img src="https://seeklogo.com/images/N/nasiol-logo-E315264B4B-seeklogo.com.png" alt="Logo Nasiol">
+                    <img src="https://www.cadillacauto.com.br/wp-content/uploads/2023/11/logo-cadillac.png" alt="Logo Cadillac">
+                    <img src="https://logodownload.org/wp-content/uploads/2020/07/meguiars-logo-1.png" alt="Logo Meguiars">
+                    <img src="https://static.vecteezy.com/system/resources/previews/020/336/161/original/gyeon-logo-gyeon-icon-transparent-png-free-vector.jpg" alt="Logo Gyeon">
+                </div>
+            </div>
+        </section>
+
+        <section class="banner-placeholder-section" style="background-color: #fff;">
+            <div class="container">
+                <div class="banner-placeholder">
+                    <p>Espaço para Banner de Remarketing (1200 x 250)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta-section">
+            <div class="container">
+                <h2>Leve seu carro ao próximo nível.</h2>
+                <p>Nossos especialistas estão prontos para montar o kit perfeito para suas necessidades. <br>Fale conosco e descubra o poder do cuidado profissional.</p>
+                <button class="btn-whatsapp-large" onclick="openGeneralWhatsApp()"><i class="fab fa-whatsapp"></i> Peça sua Cotação no WhatsApp</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                 <div class="footer-about">
+                    <img src="https://i.ibb.co/wF2fm8jx/Design-sem-nome-1.png" alt="Logo Nexxus AutoCare" class="logo">
+                    <p>Nexxus AutoCare — A sua loja de confiança para produtos de estética automotiva.</p>
+                    <p class="shipping-note">Enviamos com segurança para todo o Brasil.</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 99999-8888</p>
+                    <p><i class="fas fa-envelope"></i> contato@nexxusautocare.com.br</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="footer-payment">
+                    <h4>Pagamento Seguro</h4>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-pix"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </div>
+                    <div class="security-seal">
+                        <i class="fas fa-shield-alt"></i> Compra 100% Segura
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nexxus AutoCare. Todos os direitos reservados. CNPJ 00.000.000/0001-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="javascript:openGeneralWhatsApp()" class="whatsapp-flutuante" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
